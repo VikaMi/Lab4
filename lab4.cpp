@@ -13,10 +13,6 @@ public:
 	{
 		return 0;
 	}
-	virtual double Coordinates()
-	{
-		return 0;
-	}
 };
 
 class OnPlaneShapes : public Shapes
@@ -30,7 +26,6 @@ public:
 	{
 		return 0;
 	}
-
 };
 
 class InSpaceShapes : public Shapes
@@ -63,7 +58,6 @@ public:
 		cout << "X" << '(' << x << ',' << y << ')' << '\n';
 		return 0;
 	}
-
 private: int x, y;
 };
 
@@ -111,7 +105,6 @@ private:
 };
 
 class Rectangle : public OnPlaneShapes
-
 {
 public:
 	int Get()
@@ -177,7 +170,6 @@ public:
 private:
 	int a, b, c;
 };
-
 
 
 
