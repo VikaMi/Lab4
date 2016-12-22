@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-class figura
+class Shapes
 {
 public:
 	virtual double Square()
@@ -13,13 +13,13 @@ public:
 	{
 		return 0;
 	}
-	virtual double Koord()
+	virtual double Coordinates()
 	{
 		return 0;
 	}
 };
 
-class OnPlaneShapes : public figura
+class OnPlaneShapes : public Shapes
 {
 public:
 	virtual double Square()
@@ -33,7 +33,7 @@ public:
 
 };
 
-class InSpaceShapes : public figura
+class InSpaceShapes : public Shapes
 {
 public:
 	virtual int Get()
@@ -78,8 +78,14 @@ public:
 		cin >> x1 >> y1 >> x2 >> y2;
 		cout << "Length:";
 		size = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-		if (size>0) cout << size << "\n";
-		else cout << -size << "\n";
+		if (size > 0)
+		{
+			cout << size << "\n";
+		}
+		else
+		{
+			cout << -size << "\n";
+		}
 		return 0;
 	}
 private:
@@ -226,7 +232,7 @@ int main()
 		cout << "Volume: " << (ptr6->Extend()) << endl;
 	}
 	else
-		cout << "Error" << endl;
+		cout << "Please select number from 1 to 6" << endl;
 
 	system("pause");
 	return 0;
